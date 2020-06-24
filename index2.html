@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/picnic.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+  #placeholder {
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+    text-align: center;
+    border: 1px solid gray;
+    border-radius: 10px;  
+    font-size:50px;
+}
+</style>
+
+<body>
+  <div class="tabs three">
+    <input id='tab-1' type='radio' name='tabgroupB' checked />
+    <label class="pseudo button toggle" for="tab-1">Dados</label>
+    <input id='tab-2' type='radio' name='tabgroupB'>
+    <label class="pseudo button toggle" for="tab-2">Lake</label>
+    <input id='tab-3' type='radio' name='tabgroupB'>
+    <label class="pseudo button toggle" for="tab-3">Balloon</label>
+    <div class="row">
+      
+      <div id="Dados" class="flex three grow">
+        <h2 >Dados</h2>
+        <div>1</div>
+        <div id="placeholder" class="card"></div>
+        <div>2</div>
+        <br>
+          <div class="flex four">
+            <button class="" id="d6">d6</button>
+            <button class="" id="2d6">2d6</button>
+            <button class="" id="3d6">3d6</button>
+            <button class="" id="2d10">2d10</button>
+            <button class="" id="d20">d20</button>
+            <button class="" id="d60">d60</button>
+            <button class="" id="d100">d100</button>
+            <button class="" id="4dF">4dF</button>
+          </div>
+    </div>
+
+    <div>
+      <h2>Paris</h2>
+      <p>Paris is the capital of France.</p>
+    </div>
+
+    <div>
+      <h2>Tokyo</h2>
+      <p>Tokyo is the capital of Japan.</p>
+    </div>
+  </div>
+</div>
+
+
+  
+
+<script>
+
+// DICEROLLER CODE BELOW
+    var d6 = {
+  sides: 6,
+  roll: function () {
+    var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+    return randomNumber;
+  }
+}
+
+var d10 = {
+  sides: 10,
+  roll: function () {
+    var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+    return randomNumber;
+  }
+}
+
+var d20 = {
+  sides: 20,
+  roll: function () {
+    var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+    return randomNumber;
+  }
+}
+
+var d60 = {
+  sides: 60,
+  roll: function () {
+    var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+    return randomNumber;
+  }
+}
+
+var d100 = {
+  sides: 100,
+  roll: function () {
+    var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+    return randomNumber;
+  }
+}
+
+var d3 = {
+  sides: 3,
+  roll: function () {
+    var randomNumber = Math.floor(Math.random() * this.sides) + 1;
+    return randomNumber;
+  }
+}
+
+
+//Printa o resultado do dado na página
+
+function printNumber(number) {
+  var placeholder = document.getElementById('placeholder');
+  placeholder.innerHTML = number;
+}
+
+var rolld6 = document.getElementById('d6');
+
+rolld6.onclick = function() {
+  var result = d6.roll();
+  printNumber(result);
+};
+//                                d2d6
+function printNumber(number) {
+  var placeholder2 = document.getElementById('placeholder');
+  placeholder2.innerHTML = number;
+};
+
+var roll2d6 = document.getElementById('2d6');
+
+roll2d6.onclick = function() {
+  var result = d6.roll() + d6.roll();
+  printNumber(result);
+};
+// 3d6
+function printNumber(number) {
+  var placeholder3 = document.getElementById('placeholder');
+  placeholder3.innerHTML = number;
+};
+
+var roll3d6 = document.getElementById('3d6');
+
+roll3d6.onclick = function() {
+  var result = d6.roll() + d6.roll() + d6.roll();
+  printNumber(result);
+};
+//                                2d10
+function printNumber(number) {
+  var placeholder4 = document.getElementById('placeholder');
+  placeholder4.innerHTML = number;
+};
+
+var roll2d10 = document.getElementById('2d10');
+
+roll2d10.onclick = function() {
+  var result = d10.roll() + d10.roll();
+  printNumber(result);
+};
+
+//                                d20
+function printNumber(number) {
+  var placeholder5 = document.getElementById('placeholder');
+  placeholder5.innerHTML = number;
+};
+
+var rolld20 = document.getElementById('d20');
+
+rolld20.onclick = function() {
+  var result = d20.roll();
+  printNumber(result);
+};
+
+//                                d60
+function printNumber(number) {
+  var placeholder5 = document.getElementById('placeholder');
+  placeholder5.innerHTML = number;
+};
+
+var rolld20 = document.getElementById('d60');
+
+rolld20.onclick = function() {
+  var result = d60.roll();
+  printNumber(result);
+};
+
+//                                d100
+function printNumber(number) {
+  var placeholder6 = document.getElementById('placeholder');
+  placeholder6.innerHTML = number;
+};
+
+var rolld100 = document.getElementById('d100');
+
+rolld100.onclick = function() {
+  var result = d100.roll();
+  printNumber(result);
+};
+//                                4dF
+function printNumber(number) {
+  var placeholder7 = document.getElementById('placeholder');
+  placeholder7.innerHTML = number;
+};
+
+var roll4dF = document.getElementById('4dF');
+
+roll4dF.onclick = function() {
+  var result = (d3.roll() + d3.roll() + d3.roll() + d3.roll()) - 8;
+  printNumber(result);
+};
+</script>
+
+</body>
+</html>
