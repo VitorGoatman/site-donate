@@ -1,48 +1,83 @@
-.tabs {
-  position: relative;
-  overflow: hidden; }
-  .tabs > .row {
-    width: calc(100% + 2 * .6em);
-    display: table;
-    table-layout: fixed;
-    margin-left: -0.6em;
-    margin-bottom: 0.6em;
-    position: relative;
-    padding-left: 0;
-    
-    border-spacing: 0;
-    margin: 0.6em 0; }
-    .tabs > .row:before, .tabs > .row:after {
-      display: none; }
-    .tabs > .row > *, .tabs > .row img {
-      display: table-cell;
-      vertical-align: top;
-      margin: 0;
-      width: 100%; }
-  .tabs > input {
-    display: none; }
-    .tabs > input + * {
-      width: 100%; }
-    .tabs > input + label {
-      width: auto; }
-  .tabs.two .row {
-    width: 200%;
-    left: -100%; }
-  .tabs.two input:nth-of-type(1):checked ~ .row {
-    margin-left: 100%; }
-  .tabs.three .row {
-    width: 300%;
-    left: -200%; }
-  .tabs.three input:nth-of-type(1):checked ~ .row {
-    margin-left: 200%; }
-  .tabs.three input:nth-of-type(2):checked ~ .row {
-    margin-left: 100%; }
-  .tabs.four .row {
-    width: 400%;
-    left: -300%; }
-  .tabs.four input:nth-of-type(1):checked ~ .row {
-    margin-left: 300%; }
-  .tabs.four input:nth-of-type(2):checked ~ .row {
-    margin-left: 200%; }
-  .tabs.four input:nth-of-type(3):checked ~ .row {
-    margin-left: 100%; }
+/*
+ CSS for the main interaction
+*/
+.tabset > input[type="radio"] {
+  position: absolute;
+  left: -200vw;
+}
+
+.tabset .tab-panel {
+  display: none;
+}
+
+.tabset > input:first-child:checked ~ .tab-panels > .tab-panel:first-child,
+.tabset > input:nth-child(3):checked ~ .tab-panels > .tab-panel:nth-child(2),
+.tabset > input:nth-child(5):checked ~ .tab-panels > .tab-panel:nth-child(3),
+.tabset > input:nth-child(7):checked ~ .tab-panels > .tab-panel:nth-child(4),
+.tabset > input:nth-child(9):checked ~ .tab-panels > .tab-panel:nth-child(5),
+.tabset > input:nth-child(11):checked ~ .tab-panels > .tab-panel:nth-child(6) {
+  display: block;
+}
+
+.accordion > input[type="checkbox"] {
+  position: absolute;
+  left: -100vw;
+}
+
+.accordion .content {
+  overflow-y: hidden;
+  height: 0;
+  transition: height 0.3s ease;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .content {
+  height: auto;
+  overflow: visible;
+}
+
+.accordion label {
+  display: block;
+}
+
+.accordion {
+  margin-bottom: 1em;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .content {
+  padding: 15px;
+  border: 1px solid #e8e8e8;
+  border-top: 0;
+}
+
+.accordion .handle {
+  margin: 0;
+  font-size: 1.125em;
+  line-height: 1.2em;
+}
+
+.accordion label {
+  color: #333;
+  cursor: pointer;
+  font-weight: normal;
+  padding: 15px;
+  background: #e8e8e8;
+}
+
+.accordion label:hover,
+.accordion label:focus {
+  background: #d8d8d8;
+}
+
+.accordion .handle label:before {
+  font-family: 'fontawesome';
+  content: "\f054";
+  display: inline-block;
+  margin-right: 10px;
+  font-size: .58em;
+  line-height: 1.556em;
+  vertical-align: middle;
+}
+
+.accordion > input[type="checkbox"]:checked ~ .handle label:before {
+  content: "\f078";
+}
