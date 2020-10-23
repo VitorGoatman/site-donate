@@ -73,7 +73,7 @@
   content: "\f054";
   display: inline-block;
   margin-right: 10px;
-  font-size: .58em;
+ /* font-size: .58em;*/
   line-height: 1.556em;
   vertical-align: middle;
 }
