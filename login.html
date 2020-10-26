@@ -1,0 +1,90 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Login</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/w3.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/w3-theme-deep-purple.css" type="text/css" media="screen" />
+        <link rel="stylesheet" href="css/tabs.css" type="text/css" media="screen" />
+        <style type="text/css" media="screen">
+         .centralizar { margin:1em auto; max-width:40em; padding:0 .62em; }
+         .tabset > label {
+             position: relative;
+             display: inline-block;
+             padding:  0px 15px 15px;
+             border: 1px solid transparent;
+             border-bottom: 0;
+             cursor: pointer;
+             font-weight: 600;
+         }
+         .tabset > label::after {
+             content: "";
+             position: absolute;
+             left: 15px;
+             bottom: 20px;
+             width: 90%;
+             height: 4px;
+             background: white;
+         }
+         .tabset > label:hover,
+         .tabset > input:focus + label {
+             color: #9e3671;
+         }
+         .tabset > label:hover::after,
+         .tabset > input:focus + label::after,
+         .tabset > input:checked + label::after {
+             background: #9e3671;
+         }
+        </style>
+    </head>
+    <body>
+        <div class="centralizar tabset w3-car w3-container w3-padding-64">
+            <!-- Tab 1 -->
+            <input type="radio" name="tabset" id="tab1" checked>
+            <label class="w3-half w3-left" for="tab1"><h4><strong>Entrar</strong></h4></label>
+            <!-- Tab 2 -->
+            <input type="radio" name="tabset" id="tab2">
+            <label class="w3-half w3-right" for="tab2"><h4><strong>Registrar</strong></h4></label>
+            <div class="tab-panels">
+                <div class="tab-panel w3-card w3-twothirds w3-largexx">
+                    <div class="w3-container">
+                        <p>
+                            <form method="post" id="" action="">
+                                <label for="campousuario"><h5>Email/Usuário:</h5></label>
+                                <input class="w3-third" type="text" id="campousuario" /><br />
+                                <label for="camposenha"><h5>Senha:</h5></label>
+                                <input class="w3-third" type="password" id="camposenha" /><br /><br />
+                                <input class="w3-button w3-theme" type="submit" name="enviar" value="Entrar" />
+                            </form>
+                        </p>
+                    </div>
+                    <footer class="w3-container w3-text-blue w3-padding-16 w3-center">
+                        <small><a href="recuperar.html">Esqueci minha senha</a></small>
+                    </footer>
+                </div>
+                <div class="tab-panel w3-card w3-twothirds">
+                    <div class="w3-container">
+                        <p>
+                            <form method="post" id="novousuario" action="">
+                                <label for="campNome"><h5>Nome Completo:</h5></label>
+                                <input class="w3-twothird" type="text" id="campoNome" /><br />
+                                <label for="campoCEP"><h5>CEP:</h5></label>
+                                <input class="w3-third" type="number" id="campoCEP" /><br />
+                                <label for="campoRG"><h5>RG</h5></label>
+                                <input class="w3-third" type="number" id="campoRG" /><br />
+                                <label for="campoCPF"><h5>CPF</h5></label>
+                                <input class="w3-third" type="number" id="campoCPF" /><br />
+                                <label for="campoSenha"><h5>Senha:</h5></label>
+                                <input class="w3-third" type="password" id="camposenha" /><br /><br />
+                                <input class="w3-button w3-theme" type="submit" name="enviar" value="Registrar" />
+                            </form>
+                        </p>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </body>
+</html>
