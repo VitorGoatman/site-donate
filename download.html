@@ -1,18 +1,45 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <title>Donate - Download</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/w3.css">
-    <link rel="stylesheet" href="css/w3-theme-deep-purple.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
-     body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
-     .w3-bar,h1,button {font-family: "Montserrat", sans-serif}
-     .fa-anchor,.fa-coffee {font-size:200px}
-     .centralizar {margin:1em auto;max-width:70em;padding:0 .62em;}
-     #hr {background-color: #3d265e; height: 5px;}
-    </style>
+    <head>
+        <title>Donate - Download</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/w3.css">
+        <link rel="stylesheet" href="css/w3-theme-deep-purple.css">
+        <link rel="stylesheet" href="css/tabs.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+         .centralizar {margin:1em auto;max-width:70em;padding:0 .62em;}
+         .tabset > label {
+             position: relative;
+             display: inline-block;
+             padding:  0px 15px 15px;
+             border: 1px solid transparent;
+             border-bottom: 0;
+             cursor: pointer;
+             font-weight: 600;
+         }
+         .tabset > label::after {
+             content: "";
+             position: absolute;
+             left: 15px;
+             bottom: 20px;
+             width: 90%;
+             height: 4px;
+             background: white;
+         }
+         .tabset > label:hover,
+         .tabset > input:focus + label {
+             color: #9e3671;
+         }
+         .tabset > label:hover::after,
+         .tabset > input:focus + label::after,
+         .tabset > input:checked + label::after {
+             background: #9e3671;
+         }
+         #hr {background-color: #3d265e; height: 5px;}
+        </style>
+    </head>
     <body>
         <div class="w3-top">
             <div class="w3-bar w3-theme-d3 w3-left-align w3-large">
@@ -39,9 +66,52 @@
 
         <!-- Conteúdo -->
         <div class="centralizar w3-container">
-            <h1>Plataformas disponíveis:</h1>
+            <h1 class="w3-center">Plataformas disponíveis:</h1>
+            <div class="tabset">
+                <!-- Tab 1 -->
+                <input type="radio" name="tabset" id="tab1" checked>
+                <label class="w3-fourth" for="tab1"><h4><strong>Web</strong></h4></label>
+                <!-- Tab 2 -->
+                <input type="radio" name="tabset" id="tab2">
+                <label class="w3-fourth" for="tab2"><h4><strong>PC</strong></h4></label>
+                <!-- Tab 3  -->
+                <input type="radio" name="tabset" id="tab3">
+                <label class="w3-fourth" for="tab3"><h4><strong>Mac</strong></h4></label>
+                <!-- Tab 4  -->
+                <input type="radio" name="tabset" id="tab4">
+                <label class="w3-fourth" for="tab4"><h4><strong>Mobile</strong></h4></label>
+                <div class="tab-panels">
+                    <div class="tab-panel">
+                        <div class="w3-container">
+                            <p>
+                                Web
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab-panel">
+                        <div class="w3-container">
+                            <p>
+                                PC
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab-panel">
+                        <div class="w3-container">
+                            <p>
+                                Mac
+                            </p>
+                        </div>
+                    </div>
+                    <div class="tab-panel">
+                        <div class="w3-container">
+                            <p>
+                                Mobile
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
         <!-- Footer -->
         <footer class="w3-container w3-padding-64 w3-center w3-opacity">
             <div id="h4" class="w3-xlarge w3-padding-16">
