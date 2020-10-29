@@ -10,34 +10,6 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <style>
          .centralizar {margin:1em auto;max-width:70em;padding:0 .62em;}
-         .tabset > label {
-             position: relative;
-             display: inline-block;
-             padding:  0px 15px 15px;
-             border: 1px solid transparent;
-             border-bottom: 0;
-             cursor: pointer;
-             font-weight: 600;
-         }
-         .tabset > label::after {
-             content: "";
-             position: absolute;
-             left: 15px;
-             bottom: 20px;
-             width: 90%;
-             height: 4px;
-             background: white;
-         }
-         .tabset > label:hover,
-         .tabset > input:focus + label {
-             color: #9e3671;
-         }
-         .tabset > label:hover::after,
-         .tabset > input:focus + label::after,
-         .tabset > input:checked + label::after {
-             background: #9e3671;
-         }
-         #hr {background-color: #3d265e; height: 5px;}
         </style>
     </head>
     <body>
@@ -50,7 +22,7 @@
                 <a href="" class="w3-bar-item w3-button w3-round  w3-theme-l1 w3-right">Acesse a nossa plataforma</a>
             </div>
 
-            <!-- Navbar on small screens -->
+            <!-- Navbar on small screens --0>
             <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
                 <a href="index.html" class="w3-bar-item w3-button w3-padding-large">Home</a>
                 <a href="sobre.html" class="w3-bar-item w3-button w3-padding-large">Sobre</a>
@@ -70,21 +42,25 @@
             <div class="tabset">
                 <!-- Tab 1 -->
                 <input type="radio" name="tabset" id="tab1" checked>
-                <label class="w3-fourth" for="tab1"><h4><strong>Web</strong></h4></label>
+                <label class="w3-quarter w3-center" for="tab1"><h4><strong>Web</strong></h4></label>
                 <!-- Tab 2 -->
                 <input type="radio" name="tabset" id="tab2">
-                <label class="w3-fourth" for="tab2"><h4><strong>PC</strong></h4></label>
+                <label class="w3-quarter w3-center" for="tab2"><h4><strong>PC</strong></h4></label>
                 <!-- Tab 3  -->
                 <input type="radio" name="tabset" id="tab3">
-                <label class="w3-fourth" for="tab3"><h4><strong>Mac</strong></h4></label>
+                <label class="w3-quarter w3-center" for="tab3"><h4><strong>Mac</strong></h4></label>
                 <!-- Tab 4  -->
                 <input type="radio" name="tabset" id="tab4">
-                <label class="w3-fourth" for="tab4"><h4><strong>Mobile</strong></h4></label>
+                <label class="w3-quarter w3-center" for="tab4"><h4><strong>Mobile</strong></h4></label>
                 <div class="tab-panels">
                     <div class="tab-panel">
                         <div class="w3-container">
                             <p>
-                                Web
+                                A plataforma Donate pode ser acessada em qualquer navegador moderno.
+                                Clique em "Acesse a nossa plataforma" para começar a usa-la.
+                            </p>
+                            <p class="w3-text-blue w3-center">
+                                <a href="login.html">Ou clique nesse link para acessa-la.</a>
                             </p>
                         </div>
                     </div>

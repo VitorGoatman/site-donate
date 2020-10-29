@@ -19,6 +19,34 @@
   display: block;
 }
 
+.tabset > label {
+             position: relative;
+             display: inline-block;
+             padding:  0px 15px 15px;
+             border: 1px solid transparent;
+             border-bottom: 0;
+             cursor: pointer;
+             font-weight: 600;
+         }
+         .tabset > label::after {
+             content: "";
+             position: absolute;
+             left: 15px;
+             bottom: 20px;
+             width: 90%;
+             height: 4px;
+             background: white;
+         }
+         .tabset > label:hover,
+         .tabset > input:focus + label {
+             color: #9e3671;
+         }
+         .tabset > label:hover::after,
+         .tabset > input:focus + label::after,
+         .tabset > input:checked + label::after {
+             background: #9e3671;
+         }
+
 .accordion > input[type="checkbox"] {
   position: absolute;
   left: -100vw;
@@ -81,3 +109,5 @@
 .accordion > input[type="checkbox"]:checked ~ .handle label:before {
   content: "\f078";
 }
+
+         #hr {background-color: #3d265e; height: 5px;}
