@@ -144,6 +144,17 @@ function Login(){
 
 }
 
+function recuperarSenha(){
+var auth = firebase.auth();
+var emailAdress = document.getElementById('campousuarioRecuperar').value;
+
+auth.sendPasswordResetEmail(emailAdress).then(()=>{
+alert('Um email de recuperação foi enviado!');
+}).catch(error=>{
+    console.log(error)
+})
+
+}
 
 
   /*db.collection("Usuários").get().then((snapshot)=>{
