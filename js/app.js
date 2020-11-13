@@ -67,7 +67,7 @@ function validate(){
     else{
         return;
     }
-    window.location.href = "welcome.html";
+
 }
 
 //obtendo dados
@@ -111,6 +111,7 @@ auth.createUserWithEmailAndPassword(Email,password).then(user=>{
 }).catch(error =>{
     console.log(error);
 })
+window.location.href = "welcome.html";
 }
 
 function limpar(){
