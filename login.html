@@ -12,6 +12,7 @@
         <style type="text/css" media="screen">
          .centralizar { margin:10em auto; max-width:40em; padding:0 .62em; }
         </style>
+        <script src="js/cep.js"></script>
     </head>
     <body class="w3-light-grey">
     					<!-- The core Firebase JS SDK is always required and must be listed first -->
@@ -38,10 +39,10 @@
                         <p>
                             <form method="post" id="log_in" action="">
                                 <label for="campousuario"><h5>Email/Usuário:</h5></label>
-                                <input class="w3-third" type="text" id="campousuario" required /><br />
+                                <input class="w3-third" type="text" id="campousuario" autofocus required /><br />
                                 <label for="camposenha"><h5>Senha:</h5></label>
                                 <input class="w3-third" type="password" id="camposenha" required /><br /><br />
-                                <input class="w3-button w3-theme" onclick="Login()"  name="enviar" value="Entrar" />
+                                <input class="w3-button w3-theme" type="button"" onclick="Login()"  name="enviar" value="Entrar" />
                             </form>
                         </p>
                     </div>
@@ -54,18 +55,26 @@
                         <p>
                             <form method="post" id="novousuario" action="">
                                 <label for="campNome"><h5>Nome Completo:</h5></label>
-                                <input class="w3-twothird" type="text" id="campoNome" /><br />
+                                <input required class="w3-twothird" type="text" id="campoNome" placeholder="Ex: João da Silva" autofocus /><br />
                                 <label for="campoCEP"><h5>CEP:</h5></label>
-                                <input class="w3-third" type="number" id="campoCEP" /><br />
-                                <label for="campoRG"><h5>RG</h5></label>
-                                <input class="w3-third" type="number" id="campoRG" /><br />
-                                <label for="campoCPF"><h5>CPF</h5></label>
-                                <input class="w3-third" type="number" id="campoCPF" /><br />
+                                <input required class="w3-third" type="number" id="campoCEP" placeholder="00000-000" onblur="pesquisacep(this.value);"/><br />
+                                <label for="campoRG"><h5>E-mail:</h5></label>
+                                <input required class="w3-third" type="email" id="campoEmail" placeholder="seuemail@seuprovedor.com" /><br />
+                                <label for="campoCPF"><h5>CPF:</h5></label>
+                                <input required class="w3-third" type="number" id="campoCPF" placeholder="Ex: 000.000.000-00" /><br />
+                                <label for="campoCPF"><h5>Telefone:</h5></label>
+                                <input required class="w3-third" type="number" id="campoTelefone" placeholder="Ex: (99)99999-9999" /><br />
                                 <label for="campoSenha1"><h5>Senha:</h5></label>
-                                <input class="w3-third" type="password" id="camposenha1" /><br>
+                                <input required class="w3-third" type="password" id="campoSenha1" /><br>
                                 <label for="campoSenha2"><h5>Digite a senha novamente:</h5></label>
-                                <input class="w3-third" type="password" id="camposenha2" /><br /><br />
-                                <input class="w3-button w3-theme" type="submit" name="enviar" value="Registrar" />
+                                <input required class="w3-third" type="password" id="campoSenha2" /><br /><br />
+                            </form>
+                            <form id="form2">
+                                <input required type="checkbox" id="termo1" name="item1" value="termo1" >
+                                <label for="termo1"> <a href="#termosdeuso.html">Li e aceito os Termos de Uso</a></label><br>
+                                <input required type="checkbox" id="termo2" name="item2" value="termo2" >
+                                <label for="termo2">  <a href="#politicadeprivacidade.html">Li e aceito a Política de privacidade</a></label><br><br>
+                                <input class="w3-button w3-theme" onclick="validate()" id="enviar" type="button" name="enviar" value="Registrar" />
                             </form>
                         </p>
                     </div>

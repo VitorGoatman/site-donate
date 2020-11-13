@@ -28,7 +28,7 @@
   function checkboxValidate(){    
     Termo1 = document.getElementById('termo1');  
     Termo1.addEventListener("invalid",function(){
-        this.setCustomValidity('Atenção');
+        this.setCustomValidity('Você precisa ler e aceitar os termos para prosseguir');
     });
    
     Termo1.reportValidity();
@@ -44,14 +44,14 @@
 function checkboxValidate2(){
     Termo2 = document.getElementById('termo2');  
     Termo2.addEventListener("invalid",function(){
-        this.setCustomValidity('Atenção');
+        this.setCustomValidity('Você precisa ler e aceitar os termos para prosseguir');
     });
     Termo2.reportValidity();
     Termo2.addEventListener('change',function(){
         this.setCustomValidity('');
     });
     if(Termo2.checkValidity()){
-        return;
+        getData();
     }
    
 }
@@ -59,11 +59,10 @@ function checkboxValidate2(){
  //verificando se todos os elementos do form estão preenchidos
 function validate(){
  
-    form = document.getElementById('form');
+    form = document.getElementById('novousuario');
     reportVal = form.reportValidity();
     if(reportVal == true){
        checkboxValidate();
-         getData();
     }
     else{
         return;
@@ -72,13 +71,13 @@ function validate(){
 
 //obtendo dados
 function getData(){
-    nome_completo = document.getElementById('Nome').value;
-    _Email = document.getElementById('Email').value;
-    _CEP = document.getElementById('CEP').value;
-    _CPF = document.getElementById('CPF').value;
-    _Telefone = document.getElementById('Telefone').value;
-    _password = document.getElementById('Senha').value;
-    _Confirmpassword = document.getElementById('ConfirmaSenha').value;
+    nome_completo = document.getElementById('campoNome').value;
+    _CEP = document.getElementById('campoCEP').value;
+    _Email = document.getElementById('campoEmail').value;
+    _CPF = document.getElementById('campoCPF').value;
+    _Telefone = document.getElementById('campoTelefone').value;
+    _password = document.getElementById('campoSenha1').value;
+    _Confirmpassword = document.getElementById('campoSenha2').value;
     
    Verificar();
     
@@ -86,7 +85,7 @@ function getData(){
 
 
 function Verificar(){
-    ConfirmarSenha = document.getElementById('ConfirmaSenha');
+    ConfirmarSenha = document.getElementById('campoSenha2');
 
     if(_password.lenght < 6){
         _password.setCustomValidity("Senha muito fraca!");
@@ -102,7 +101,7 @@ function Verificar(){
         });
         return;
     }
-    Cadastrar(nome_completo,  _CEP, _Email, _Telefone,_CPF);
+    Cadastrar(nome_completo, _Email, _CEP , _Telefone, _CPF);
 }
 
 function Cadastrar(nome_completo, _Email, _CEP ,_Telefone, _CPF,){
@@ -110,8 +109,9 @@ db.collection(USUARIOS).add({
         Nome: nome_completo,
         Email: _Email,
         CEP: _CEP,
-        CPF: _CPF,
         Telefone: _Telefone,
+        CPF: _CPF,
+        
             
      
 })
@@ -119,14 +119,14 @@ CriarUsuario();
 }
 
 function CriarUsuario(){
-    Email = document.getElementById('Email').value;
-    password = document.getElementById('Senha').value;
-    confirm_password = document.getElementById('ConfirmaSenha').value;
+    Email = document.getElementById('campoEmail').value;
+    password = document.getElementById('campoSenha1').value;
+    confirm_password = document.getElementById('campoSenha2').value;
     
 
 auth.createUserWithEmailAndPassword(Email,password).then(user=>{
     console.log(user);
-    window.location.href="inicio.html";
+    //window.location.href="inicio.html";
 }).catch(error =>{
     console.log(error);
 })
