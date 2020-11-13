@@ -79,30 +79,11 @@ function getData(){
     _password = document.getElementById('campoSenha1').value;
     _Confirmpassword = document.getElementById('campoSenha2').value;
     
-   Verificar();
-    
+    Cadastrar(nome_completo, _Email, _CEP , _Telefone, _CPF);    
 }
 
 
-function Verificar(){
-    ConfirmarSenha = document.getElementById('campoSenha2');
 
-    if(_password.lenght < 6){
-        _password.setCustomValidity("Senha muito fraca!");
-        _password.addEventListener('input',function(){
-            this.setCustomValidity('');
-        });
-    }
-    
-    if(_Confirmpassword!= _password){
-        ConfirmarSenha.setCustomValidity("Senhas não coincidem!");
-        ConfirmarSenha.addEventListener('input',function(){
-            this.setCustomValidity('');
-        });
-        return;
-    }
-    Cadastrar(nome_completo, _Email, _CEP , _Telefone, _CPF);
-}
 
 function Cadastrar(nome_completo, _Email, _CEP ,_Telefone, _CPF,){
 db.collection(USUARIOS).add({
@@ -111,9 +92,6 @@ db.collection(USUARIOS).add({
         CEP: _CEP,
         Telefone: _Telefone,
         CPF: _CPF,
-        
-            
-     
 })
 CriarUsuario();   
 }
@@ -126,10 +104,22 @@ function CriarUsuario(){
 
 auth.createUserWithEmailAndPassword(Email,password).then(user=>{
     console.log(user);
+    limpar();
+    window.location.href="login.html";
     //window.location.href="inicio.html";
 }).catch(error =>{
     console.log(error);
 })
+}
+
+function limpar(){
+   document.getElementById('campoNome').value = "";
+   document.getElementById('campoCEP').value = "";
+   document.getElementById('campoEmail').value = "";
+   document.getElementById('campoCPF').value = "";
+   document.getElementById('campoTelefone').value = "";
+   document.getElementById('campoSenha1').value = "";
+   document.getElementById('campoSenha2').value = "";
 }
 
 function Login(){
