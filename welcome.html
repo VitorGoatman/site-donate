@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bem-vindo(a)!</title>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/tema-donate.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+        .centralizar { margin:10em auto; max-width:60em; padding:0 .62em; }
+        .fa-check-circle { font-size: 150px; }
+        .w3-animate-opacity { animation:opac 20s; }  
+    </style>
+</head>
+<body>
+
+	<div class="centralizar w3-center">
+		<header class="w3-text-theme">
+			<h1><strong>Sua conta foi criada com sucesso!</strong></h1>
+		</header>
+		<div class="w3-animate-zoom">
+			<i class="fa fa-check-circle w3-text-green" aria-hidden="true"></i>
+		</div>
+		<footer class="w3-padding-64 w3-animate-opacity">
+			<small><a href="login.html">Clique aqui se você não foi redirecionado automaticamente.</a></small>
+		</footer>
+	</div>
+<script type="text/javascript">
+	function redirecionar(argument) {
+	 	window.location.href = "login.html";
+	 }
+	setTimeout(redirecionar, 5000);
+</script>
+</body>
+</html>
