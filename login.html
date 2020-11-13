@@ -14,6 +14,17 @@
         </style>
     </head>
     <body class="w3-light-grey">
+    					<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+
+<script src="js/app.js"></script>
         <div class="centralizar tabset w3-white w3-card w3-container">
             <!-- Tab 1 -->
             <input type="radio" name="tabset" id="tab1" checked>
@@ -25,12 +36,12 @@
                 <div class="tab-panel w3-twothirds w3-largexx">
                     <div class="w3-container">
                         <p>
-                            <form method="post" id="" action="">
+                            <form method="post" id="log_in" action="">
                                 <label for="campousuario"><h5>Email/Usuário:</h5></label>
-                                <input class="w3-third" type="text" id="campousuario" /><br />
+                                <input class="w3-third" type="text" id="campousuario" required /><br />
                                 <label for="camposenha"><h5>Senha:</h5></label>
-                                <input class="w3-third" type="password" id="camposenha" /><br /><br />
-                                <input class="w3-button w3-theme" type="submit" name="enviar" value="Entrar" />
+                                <input class="w3-third" type="password" id="camposenha" required /><br /><br />
+                                <input class="w3-button w3-theme" onclick="Login()"  name="enviar" value="Entrar" />
                             </form>
                         </p>
                     </div>
