@@ -163,8 +163,18 @@ alertaRecuperarSenha();
 }
 
 function alertaRecuperarSenha(){
-swal("Sucesso!", "Um email para redefinição de senha foi enviado!", "success");
+    swal({
+        title: "Sucesso!",
+        text: "Um email para redefinição de senha foi enviado!",
+        icon: "success",
+        timer: 5000
+        });
+        setTimeout(redirecionar, 5000);
+    }
+function redirecionar() {
+    window.location.href = "login.html";
 }
+
 
   /*db.collection("Usuários").get().then((snapshot)=>{
                         snapshot.forEach((doc)=>{
