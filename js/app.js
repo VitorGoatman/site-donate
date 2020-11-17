@@ -117,7 +117,7 @@ auth.createUserWithEmailAndPassword(Email,password).then(user=>{
 }
 
 function alertaEmail(){
-    swal("Ocorreu um erro", "Esse email já foi usado!", "error");
+    swal("Ocorreu um erro", "Esse email já foi cadastrado!", "error");
 }
 
 function limpar(){
@@ -156,13 +156,15 @@ var auth = firebase.auth();
 var emailAdress = document.getElementById('campousuarioRecuperar').value;
 
 auth.sendPasswordResetEmail(emailAdress).then(()=>{
-alert('Um email de recuperação foi enviado!');
+alertaRecuperarSenha();
 }).catch(error=>{
-    console.log(error)
+    console.log(error);
 })
-
 }
 
+function alertaRecuperarSenha(){
+swal("Sucesso!", "Um email para redefinição de senha foi enviado!", "success");
+}
 
   /*db.collection("Usuários").get().then((snapshot)=>{
                         snapshot.forEach((doc)=>{
