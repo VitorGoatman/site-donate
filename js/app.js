@@ -84,8 +84,6 @@ function getData(){
 }
 
 
-
-
 function Cadastrar(nome_completo, _Email, _CEP ,_Telefone, _CPF,){
   db.collection(USUARIOS).add({
         Nome: nome_completo,
@@ -143,7 +141,6 @@ function Login(){
     })
     }
     auth.currentUser;
-
 }
 
 function recuperarSenha(){

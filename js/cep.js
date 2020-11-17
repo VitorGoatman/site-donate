@@ -1,3 +1,4 @@
+
 function limpa_formulário_cep() {
     //Limpa valores do formulário de cep.
     /*document.getElementById('rua').value=("");
@@ -16,8 +17,9 @@ if (!("erro" in conteudo)) {
 } //end if.
 else {
     //CEP não Encontrado.
+   
     limpa_formulário_cep();
-    alert("CEP não encontrado.");
+    notFound();
 }
 }
 
@@ -53,8 +55,9 @@ if (cep != "") {
     } //end if.
     else {
         //cep é inválido.
+        formatoInvalido();
+
         limpa_formulário_cep();
-        alert("Formato de CEP inválido.");
     }
 } //end if.
 else {
@@ -62,3 +65,9 @@ else {
     limpa_formulário_cep();
 }
 };
+function formatoInvalido(){
+    swal("Ocorreu um erro", "Insira um CEP válido!", "error");
+}
+function notFound(){
+    swal("Ocorreu um erro", "Insira um CEP válido!", "error");
+}
