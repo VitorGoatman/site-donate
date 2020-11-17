@@ -104,12 +104,10 @@ function CriarUsuario(){
 auth.createUserWithEmailAndPassword(Email,password).then(user=>{
     console.log(user);
     limpar();
-    window.location.href="login.html";
-    //window.location.href="inicio.html";
+    window.location.href = "welcome.html";
 }).catch(error =>{
     console.log(error);
 })
-window.location.href = "welcome.html";
 }
 
 function limpar(){
