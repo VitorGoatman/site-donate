@@ -1,40 +1,20 @@
-.container{
+.flex{
     display:flex;
     flex-direction: row;
     flex-wrap: wrap;
     margin: auto;
-    justify-content: space-evenly;
-    background-color: #580d36;
-    color:white;
-    width: calc(100% - 180px);
-}
-
-.r1{
-    text-align: center;
-}
-
-.r2{
-    text-align: center;
-}
-
-.r3{
-    text-align: center;
+    justify-content: center;
+    width: calc(100% - 10em);
 }
 
 .rect{
-    margin:auto;
+    padding:16px;
+    margin:;
     width: 300px;
-    height: 320px;
 }
 
-.container :hover{
-
-    box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 0.5);
+.w3-cell :hover{
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
-
-}
-
-.r2 :hover{
 
 }
