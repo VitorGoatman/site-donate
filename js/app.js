@@ -140,7 +140,7 @@ function Login(){
     if(reportVal==true){
     firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION).then(()=>{
         firebase.auth().signInWithEmailAndPassword(userEmail,userPassword).then(loggedUser=>{
-           // window.location="inicio.html";
+            window.location="Instituicoes.html";
         }).catch(error=>{
             console.log(error)
         })
