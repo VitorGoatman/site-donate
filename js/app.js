@@ -152,6 +152,9 @@ function Login(){
             else if(error.code == "auth/user-not-found"){
                 alertaUsuario3();
             }
+            else if(error.code == "auth/too-many-requests"){
+                alertaUsuario4();
+            }
         })
     }).catch(error=>{
         console.log(error)
@@ -161,13 +164,17 @@ function Login(){
 }
 
 function alertaUsuario(){
-    swal("Erro ao logar", "Usuário ou senha inválida", "error");
+    swal("Usuário ou senha inválida", "Insira um usuário e senha válida e tente novamente", "error");
 }
 function alertaUsuario2(){
-    swal("Erro ao logar", "Endereço de email inválido", "error");
+    swal("Endereço de email inválido", "Insira um endereço de email válido e tente novamente", "error");
 }
 function alertaUsuario3(){
-    swal("Erro ao logar", "Usuário não cadastrado", "error");
+    swal("Usuário não cadastrador", "Gostaria de se registrar?", "error");
+}
+
+function alertaUsuario4(){
+    swal("Muitas tentativas", "Aguarde alguns minutos e tente novamente", "error");
 }
 
 function recuperarSenha(){
