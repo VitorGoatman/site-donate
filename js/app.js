@@ -143,19 +143,31 @@ function Login(){
             window.location="Instituicoes.html";
         }).catch(error=>{
             console.log(error)
+            if(error.code == "auth/wrong-password"){
+                alertaUsuario();
+            }
+            else if(error.code == "auth/invalid-email"){
+                alertaUsuario2();
+            }
+            else if(error.code == "auth/user-not-found"){
+                alertaUsuario3();
+            }
         })
     }).catch(error=>{
         console.log(error)
-        if(error.code == "auth/wrong-password"){
-            alertaUsuario();
-        }
     })
     }
     auth.currentUser;
 }
 
-alertaUsuario(){
-    swal("Erro ao logar", "Usuário ou senha inválida.", "error");
+function alertaUsuario(){
+    swal("Erro ao logar", "Usuário ou senha inválida", "error");
+}
+function alertaUsuario2(){
+    swal("Erro ao logar", "Endereço de email inválido", "error");
+}
+function alertaUsuario3(){
+    swal("Erro ao logar", "Usuário não cadastrado", "error");
 }
 
 function recuperarSenha(){
