@@ -143,12 +143,12 @@ function Login(){
             window.location="Instituicoes.html";
         }).catch(error=>{
             console.log(error)
-            if(error.code == "auth/wrong-password"){
-                alertaUsuario();
-            }
         })
     }).catch(error=>{
         console.log(error)
+        if(error.code == "auth/wrong-password"){
+            alertaUsuario();
+        }
     })
     }
     auth.currentUser;
