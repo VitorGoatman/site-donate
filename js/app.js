@@ -167,9 +167,9 @@ function alertaRecuperarSenha(){
         title: "Sucesso!",
         text: "Um email para redefinição de senha foi enviado!",
         icon: "success",
-        timer: 5000
+        timer: 5500
         });
-        setTimeout(redirecionar, 5000);
+        setTimeout(redirecionar, 5500);
     }
 function redirecionar() {
     window.location.href = "login.html";
