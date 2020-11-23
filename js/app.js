@@ -143,12 +143,19 @@ function Login(){
             window.location="Instituicoes.html";
         }).catch(error=>{
             console.log(error)
+            if(error.code == "auth/wrong-password"){
+                alertaUsuario();
+            }
         })
     }).catch(error=>{
         console.log(error)
     })
     }
     auth.currentUser;
+}
+
+alertaUsuario(){
+    swal("Erro ao logar", "Usuário ou senha inválida.", "error");
 }
 
 function recuperarSenha(){
