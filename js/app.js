@@ -160,7 +160,6 @@ function Login(){
         console.log(error)
     })
     }
-    auth.currentUser;
 }
 
 function alertaUsuario(){
