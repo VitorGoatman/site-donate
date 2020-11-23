@@ -170,7 +170,7 @@ function alertaUsuario2(){
     swal("Endereço de email inválido", "Insira um endereço de email válido e tente novamente", "error");
 }
 function alertaUsuario3(){
-    swal("Usuário não cadastrador", "Gostaria de se registrar?", "error");
+    swal("Usuário não cadastrado", "Gostaria de se registrar?", "error");
 }
 
 function alertaUsuario4(){
