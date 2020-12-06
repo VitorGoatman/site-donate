@@ -29,9 +29,7 @@
 
   // (A) GET FROM SESSION
   var id = sessionStorage.getItem("id");
-    function get () {
-
-
+    function get(){
   // (B) IT WORKS!
   // Session data will perish once tab/window is closed
  // console.log(id); // Foo Bar
@@ -40,7 +38,6 @@
    sessionStorage.removeItem("KEY");
    sessionStorage.clear();
   } 
-
 
 function loadPage() {
   let ref = db.collection("DadosInstituicoes").doc(id);
@@ -61,12 +58,6 @@ ref.get().then((doc)=>{
         }
         html += "</div>";
         html += "</div>";
-     /*   html += 
-        html += 
-        html += 
-        html += 
-*/
-          //  console.log(instituicao);
 document.getElementById("teste").innerHTML = html;
     }); 
 }
