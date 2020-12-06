@@ -58,7 +58,7 @@ ref.get().then((doc)=>{
         }
         html += "</div>";
         html += "</div>";
-document.getElementById("teste").innerHTML = html;
+document.getElementById("info").innerHTML = html;
     }); 
 }
 
