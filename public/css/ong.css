@@ -1,0 +1,40 @@
+.container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #580d36;
+    color:white;
+    width: calc(100% - 150px);
+    margin: auto;
+
+
+}
+
+.r1{
+    text-align: center;
+}
+
+.r2{
+    text-align: center;
+}
+
+.r3{
+    text-align: center;
+}
+
+.rect{
+    margin:auto;
+    width: 300px;
+    height: 320px;
+}
+
+.container :hover{
+
+
+
+}
+
+.r2 :hover{
+
+}
