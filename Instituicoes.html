@@ -36,10 +36,33 @@
             background-color: black;
             height: 15px;
         }
+
+        .divError{
+        display: hidden;
+         margin-top: 8%;
+        }
+        .error{
+            text-align: center;
+            display: hidden;
+            margin: 0px auto;
+            font-weight: bold;
+            color:#bfbfbf;
+        }
+
     </style>
 </head>
+                    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
 
 <body class="w3-light-gray">
+
 
     <div class="w3-center w3-theme w3-padding-16" style="">
         <h1 class="w3-jumbo">Instituições</h1>
@@ -47,63 +70,15 @@
     <div id="hr"></div>
 
     <div class="w3-container">
-        <div class="w3-cell-row flex">
+        <div id="teste" class="w3-cell-row flex">
 
-            <div class="rect w3-cell w3-center w3-hover-shadow w3-hover-white">
-                <h2>Nosso Lar</h2>
-                <img src="img/Instituicao_Nosso_Lar.jpg" width="150px" height="150px">
-                <p>Doação de roupas, calçados, brinquedos, acessórios...</p>
-                <a class="w3-button w3-black" href="Instituicoes/NossoLar.html">Detalhes</a>
-            </div>
-
-            <div class="rect w3-cell w3-center w3-hover-shadow w3-hover-white">
-                <h2>DICA</h2>
-                <img src="img/Instituto_DICA.jpg" width="150px" height="150px">
-                <p>Doação de alimentos, produtos de higiene, roupas, calçados, brinquedos... </p>
-                <a class="w3-button w3-black" href="Instituicoes/DICA.html">Detalhes</a>
-            </div>
-        
-            <div class="rect w3-cell w3-center w3-hover-shadow w3-hover-white">
-                <h2>Instituto Dom Bosco</h2>
-                <img src="img/Instituto_Dom_Bosco.jpg" width="150px" height="150px">
-                <p>Doação de roupas, livros, brinquedos, móveis, calçados...</p>
-                <a class="w3-button w3-black" href="Instituicoes/DomBosco.html">Detalhes</a>
-            </div>
-
-            <div class="rect w3-cell w3-center w3-hover-shadow w3-hover-white">
-                <h2>ONG João Victor</h2>
-                <img src="img/ONG_Joao_Victor.jpg" width="150px" height="150px">
-                <p>Doação de alimentos e itens de higiene</p>
-                <a class="w3-button w3-black" href="Instituicoes/JoaoVictor.html">Detalhes</a>
-            </div>
-        </div>
-        <div class="w3-cell-row flex">
-
-            <div class="rect w3-cell w3-center w3-hover-shadow w3-hover-white">
-                <h2>Ong Nova Mulher</h2>
-                <img src="img/Ong_Nova_Mulher.jpg" width="150px" height="150px">
-                <p>Doação de roupas, calçados e brinquedos</p>
-                <a class="w3-button w3-black" href="Instituicoes/NovaMulher.html">Detalhes</a>
-            </div>
-
-            <div class="rect w3-cell w3-center w3-hover-shadow w3-hover-white">
-                <h2>ONG Pé de saber</h2>
-                <img src="img/ONG_pe_de_saber.jpg" width="150px" height="150px">
-                <p>Doação de livros</p>
-                <a class="w3-button w3-black" href="Instituicoes/PeDeSaber.html">Detalhes</a>
-            </div>
-
-            <div class="rect w3-cell w3-center w3-hover-shadow w3-hover-white">
-                <h2>ONG Reviva</h2>
-                <img src="img/Ong_Reviva.png" width="150px" height="150px">
-                <p>Doação de roupas, chinelos, brinquedos e alimentos</p>
-                <a class="w3-button w3-black" href="Instituicoes/Reviva.html">Detalhes</a>
-            </div>
+            
         </div>
     </div>
-
-
-
+    <div class="divError" id="divErr">
+        <h2 class="error" id="err_localizacao"></h2>
+        <button id="btn_err" class="w3-button w3-black" style="display: none; margin:auto;" onclick="getLocation()">Tentar novamente</button>
+    </div>
     <!-- Footer 
         <footer class="w3-container w3-padding-64 w3-center w3-opacity">
             <div id="h4" class="w3-xlarge w3-padding-16">
@@ -117,6 +92,9 @@
             <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
         </footer>
     -->
+        <script src="js/app.js"></script>
+        <script src="js/geolocation.js"></script>
+         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </body>
 
 </html>
