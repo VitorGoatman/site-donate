@@ -23,6 +23,9 @@
   let db = firebase.firestore();
   let auth = firebase.auth()
 
+  
+  var arrObject = [];
+  var helper = [];
 
   //verificando se as duas checkbox estão marcadas
   function checkboxValidate(){    
