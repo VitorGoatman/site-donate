@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+
+	 <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/tema-donate.css">
+    <link rel="stylesheet" href="css/tabs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+     <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        h5 {
+            text-align: justify;
+        }
+
+        .w3-bar,
+        h1,
+        button {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .fa-anchor,
+        .fa-coffee {
+            font-size: 200px
+        }
+
+        #hr {
+            background-color: black;
+            height: 15px;
+        }
+
+         .centralizar {margin:1em auto;max-width:80em;padding:0 .62em;}
+        .center{
+             display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+   width: calc(100% - 3em);
+        }
+    </style>
+	<title>Teste</title>
+
+</head>
+<body onload="get();loadPage();">
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+
+  <body class="w3-light-gray">
+      <header id='titulo' class='w3-theme w3-center w3-padding-small'></header>
+      <div id='hr'></div>
+      <main class="centralizar">
+          <section class="w3-row-padding w3-bar w3-padding-small">
+              <div id='img' class='w3-bar-item w3-pale-ble rect'></div>
+              <div class='w3-rest w3-large w3-card w3-white w3-padding-large'>
+                  <h1> Sobre a ONG: </h1>
+                  <p id='sobre'></p>
+              </div>
+          </section>
+          <section class="w3-row-padding w3-bar w3-padding-small">
+              <div class='w3-bar-item w3-card w3-large w3-rest w3-white w3-padding-large'>
+                  <h1>Doações Aceitas</h1>
+                  <ul id='doações'>
+                  </ul>
+              </div>
+              <div class="w3-rest w3-center w3-white w3-card w3-padding-small">
+                  <p id='mapa'></p>
+              </div>
+          </section>
+      </main>
+
+
+
+
+
+  <script src="js/detalhes.js"></script>
+
+<!--<label for="vaipora" class="w3-button w3-black">Sou um butaum</label>
+<input type="checkbox" id="vaipora" class="w3-button w3-black" style="display: none; font-size:100px;"></input>
+-->
+</body>
+</html>

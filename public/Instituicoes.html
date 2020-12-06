@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Donate - Instituições</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/w3.css">
+    <link rel="stylesheet" href="css/tema-donate.css">
+    <link rel="stylesheet" href="css/tabs.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body, h1, h2, h3, h4, h5, h6 {
+            font-family: "Lato", sans-serif
+        }
+
+        h5 {
+            text-align: justify;
+        }
+
+       h2 { font-weight: bold; }
+
+        .w3-bar,
+        h1,
+        button {
+            font-family: "Montserrat", sans-serif
+        }
+
+        .fa-anchor,
+        .fa-coffee {
+            font-size: 200px
+        }
+
+        #hr {
+            background-color: black;
+            height: 15px;
+        }
+
+        .divError{
+        display: hidden;
+         margin-top: 8%;
+        }
+        .error{
+            text-align: center;
+            display: hidden;
+            margin: 0px auto;
+            font-weight: bold;
+            color:#bfbfbf;
+        }
+
+    </style>
+</head>
+                    <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-auth.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/8.0.1/firebase-firestore.js"></script>
+
+<body class="w3-light-gray">
+
+
+    <div class="w3-center w3-theme w3-padding-16" style="">
+        <h1 class="w3-jumbo">Instituições</h1>
+    </div>
+    <div id="hr"></div>
+
+    <div class="w3-container">
+        <div id="teste" class="w3-cell-row flex">
+
+            
+        </div>
+    </div>
+    <div class="divError" id="divErr">
+        <h2 class="error" id="err_localizacao"></h2>
+        <button id="btn_err" class="w3-button w3-black" style="display: none; margin:auto;" onclick="getLocation()">Tentar novamente</button>
+    </div>
+    <!-- Footer 
+        <footer class="w3-container w3-padding-64 w3-center w3-opacity">
+            <div id="h4" class="w3-xlarge w3-padding-16">
+                <i class="fa fa-facebook-official w3-hover-opacity"></i>
+                <i class="fa fa-instagram w3-hover-opacity"></i>
+                <i class="fa fa-snapchat w3-hover-opacity"></i>
+                <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+                <i class="fa fa-twitter w3-hover-opacity"></i>
+                <i class="fa fa-linkedin w3-hover-opacity"></i>
+            </div>
+            <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+        </footer>
+    -->
+        <script src="js/app.js"></script>
+        <script src="js/geolocation.js"></script>
+         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>

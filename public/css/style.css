@@ -1,0 +1,20 @@
+.flex{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+    width: calc(100% - 10em);
+}
+
+.rect{
+    padding:16px;
+    margin:;
+    width: 300px;
+}
+
+.w3-cell :hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+}
