@@ -11,8 +11,7 @@ function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition, showError);
   } else { 
-    alert("liga sapora")
-    x.innerHTML = "Geolocation is not supported by this browser.";
+    x.innerHTML = "Seu navegador não tem suporte a localização";
   }
 }
 
