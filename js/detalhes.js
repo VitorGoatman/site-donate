@@ -31,6 +31,7 @@ var img ="";
 var sobre ="";
 var doacoes="";
 var mapa="";
+var endereco="";
   // (A) GET FROM SESSION
 var id = sessionStorage.getItem("id");
 function get(){
@@ -53,21 +54,28 @@ function loadPage() {
     titulo += "<h1 class='w3-jumbo' id='titulo'>" + instituicao.titulo + "</h1>";
     img += "<img src='" + instituicao.url + "' width='300px' height='250px'>" + "</div>";
     sobre += instituicao.sobre;
+    endereco +="Endereço: " + instituicao.endereco;
     for(i = 0; i< instituicao.doacoes_aceitas.length; i++){
       doacoes += "<li>" + instituicao.doacoes_aceitas[i] + "</li>";
     }
     mapa += "<iframe class='' width='90%' height='350' frameborder='0' style='border:0'"
       + "src='https://www.google.com/maps/embed/v1/search?key=AIzaSyDoMTFBhbN4qGiPSVYXCmhZCIqyj7ZgUrw&q="
       + instituicao.endereco  + "' allowfullscreen>" + "</iframe>";
-    console.log(instituicao.endereco)
     document.getElementById("titulo").innerHTML = titulo;
     document.getElementById("img").innerHTML = img;
     document.getElementById("sobre").innerHTML = sobre;
+    document.getElementById("divSobre").style.visibility = "visible";
+
     document.getElementById("doações").innerHTML = doacoes;
+    document.getElementById("divDoacao").style.visibility = "visible";
+
     document.getElementById("mapa").innerHTML = mapa;
     document.getElementById("imgMob").innerHTML = img;
     document.getElementById("sobreMob").innerHTML = sobre;
     document.getElementById("doaçõesMob").innerHTML = doacoes;
+    document.getElementById("endereco").innerHTML = endereco;
     document.getElementById("mapaMob").innerHTML = mapa;
+    document.getElementById("divEnd").style.visibility = "visible";
+
   });
 }
