@@ -165,6 +165,19 @@ function Login(){
     }
 }
 
+function LoginAnonimo(){
+  
+    firebase.auth().setPersistence(firebase.auth.Auth.Persistence.SESSION).then(()=>{
+        firebase.auth().signInAnonymously().then(loggedUser =>{
+            window.location="Instituicoes.html";
+        }).catch(function(error){
+    console.log(error)
+        })
+    }).catch(error=>{
+        console.log(error)
+    })
+}
+
 function alertaUsuario(){
     swal("Usuário ou senha inválida", "Insira um usuário e senha válida e tente novamente", "error");
 }
